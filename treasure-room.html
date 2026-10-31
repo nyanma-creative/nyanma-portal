@@ -83,6 +83,14 @@
       <p>にゃんまちゃんとツナマヨのキャラカードです。SNSのヘッダーなどにどうぞ。</p>
       <a class="btn btn-pink" href="assets/chara-card.webp" download>📥 ダウンロードする</a>
     </div>
+
+    <h2 class="section-title fortune-title">🔮 ツナマヨの「ま〜！」占い</h2>
+    <p class="section-lead">ボタンを押すと、ツナマヨが今日の「ま〜！」を教えてくれるよ。何回でも試せます。</p>
+    <div class="fortune-box">
+      <img id="fortune-img" src="assets/tsunamayo-bustup.webp" alt="ツナマヨ">
+      <p class="fortune-result" id="fortune-result">ツナマヨが待ってるよ。「ま〜！」を聞いてみてね。</p>
+      <button class="btn btn-pink" type="button" id="fortune-btn">ま〜！を聞く</button>
+    </div>
   </div>
 </section>
 
@@ -126,6 +134,22 @@
       error.classList.add('is-shown');
     }
   });
+
+  // ツナマヨの「ま〜！」占い
+  var FORTUNES = [
+    { img: 'assets/expr/tsunamayo-ki.webp', text: 'ま〜〜！！（大吉！ 今日はとびきり良い日になりそう！）' },
+    { img: 'assets/expr/tsunamayo-raku.webp', text: 'ま〜♪（中吉。楽しいことが見つかる予感！）' },
+    { img: 'assets/tsunamayo-bustup.webp', text: 'ま〜（吉。いつも通りの一日が一番の幸せかも）' },
+    { img: 'assets/expr/tsunamayo-do.webp', text: 'ま〜！（今日は気合いの日。深呼吸してから始めよう）' }
+  ];
+  var fortuneBtn = document.getElementById('fortune-btn');
+  if (fortuneBtn) {
+    fortuneBtn.addEventListener('click', function () {
+      var f = FORTUNES[Math.floor(Math.random() * FORTUNES.length)];
+      document.getElementById('fortune-img').src = f.img;
+      document.getElementById('fortune-result').textContent = f.text;
+    });
+  }
 </script>
 </body>
 </html>

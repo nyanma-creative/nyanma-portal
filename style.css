@@ -1236,3 +1236,12 @@ section { padding: 56px 0 8px; }
 .short-card:hover { transform: translateY(-3px); }
 .short-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; display: block; background: var(--cream); }
 .short-card span { display: block; padding: 10px 12px; color: var(--ink); font-weight: 600; font-size: 0.88rem; line-height: 1.45; }
+
+/* ---------- お宝部屋：ま〜！占い（第12波） ---------- */
+.fortune-title { margin-top: 48px; }
+.fortune-box {
+  max-width: 720px; margin: 0 auto; background: var(--card); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 26px 24px; text-align: center;
+}
+.fortune-box img { height: 220px; width: auto; max-width: 100%; margin: 0 auto 14px; border-radius: 14px; object-fit: cover; }
+.fortune-result { font-weight: 700; font-size: 1.05rem; margin-bottom: 16px; min-height: 1.8em; }
