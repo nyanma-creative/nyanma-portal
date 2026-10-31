@@ -1220,3 +1220,12 @@ section { padding: 56px 0 8px; }
 }
 #robo .profile-head figure img { object-position: 50% 35%; }
 .costume-box figure img { max-height: 300px; margin: 0 auto; }
+
+/* ---------- キャラページ：目次チップ（第10波） ---------- */
+.anchor-nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; padding-top: 18px; }
+.anchor-nav a {
+  background: #fff; color: var(--ink); font-weight: 700; font-size: 0.92rem;
+  border: 2px solid var(--line); border-radius: 999px; padding: 6px 18px; text-decoration: none;
+}
+.anchor-nav a:hover { border-color: var(--pink); color: var(--pink-dark); }
+.profile { scroll-margin-top: 92px; }
