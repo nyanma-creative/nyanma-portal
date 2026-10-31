@@ -232,10 +232,10 @@
     <!-- プレースホルダ: 動画IDが確定したら、この .video-placeholder を
          <iframe src="https://www.youtube.com/embed/動画ID" ...> に差し替えてください。
          Manus版で掲載されていた最新作品: 「にゃんまちゃん自己紹介ソング（2026 ver）」 -->
-    <div class="video-placeholder" data-placeholder="YouTube動画の埋め込みを設定予定">
-      <span class="vp-title">🎬 最新動画は準備中です</span>
-      <span>動画の埋め込みは近日公開予定です</span>
-    </div>
+    <div class="video-box"><div class="yt-lite" data-ytid="5T00DBx43gE" role="button" tabindex="0" aria-label="動画を再生する"><img src="https://i.ytimg.com/vi/5T00DBx43gE/hqdefault.jpg" alt="にゃんまちゃん自己紹介ソング（2026 ver）のサムネイル" loading="lazy"><span class="yt-play" aria-hidden="true">▶</span></div></div>
+    <p style="text-align:center; margin-top:22px;">
+      <a class="btn btn-blue" href="https://www.youtube.com/@にゃんまちゃん" target="_blank" rel="noopener">YouTubeチャンネルはこちら</a>
+    </p>
   </div>
 </section>
 
@@ -266,6 +266,25 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+// YouTube ライト埋め込み: クリックでプレーヤーに切り替え
+document.querySelectorAll('.yt-lite').forEach(function (el) {
+  function play() {
+    var f = document.createElement('iframe');
+    f.className = 'yt-frame';
+    f.src = 'https://www.youtube-nocookie.com/embed/' + el.getAttribute('data-ytid') + '?autoplay=1&rel=0';
+    f.title = 'YouTube video player';
+    f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+    f.allowFullscreen = true;
+    el.replaceWith(f);
+  }
+  el.addEventListener('click', play);
+  el.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); }
+  });
+});
 </script>
 </body>
 </html>
