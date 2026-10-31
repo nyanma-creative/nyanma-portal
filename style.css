@@ -76,9 +76,13 @@ a { color: var(--blue-dark); }
 }
 .main-nav a:hover { background: var(--cream); }
 .main-nav a.nav-cta {
+  display: inline-block;
   background: var(--pink);
   color: #fff;
   font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 999px;
+  box-shadow: 0 3px 10px rgba(232, 79, 134, 0.35);
 }
 .main-nav a.nav-cta:hover { background: var(--pink-dark); }
 
@@ -992,3 +996,105 @@ section { padding: 56px 0 8px; }
   .daily-life-grid { grid-template-columns: 1fr; max-width: 340px; }
   .cta-band-btn { font-size: 0.98rem; padding: 13px 20px; }
 }
+
+/* ===== 第6波：ヒーローサブコピー／お知らせタグ色分け／プロフィールチップ／お宝部屋バッジ ===== */
+.hero-sub {
+  color: var(--pink-dark);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 10px auto 6px;
+  max-width: 640px;
+}
+.news-tag.tag-site { background: #e3f0fd; color: var(--blue-dark); }
+.news-tag.tag-works { background: #f0e6fb; color: #7b4bb7; }
+.news-tag.tag-manga { background: #ffedd5; color: #c2620a; }
+.news-tag.tag-illust { background: #e2f5e9; color: #1e7d4f; }
+.news-tag.tag-mv { background: #ffe3e8; color: var(--red); }
+.news-tag.tag-info { background: var(--cream); color: var(--pink-dark); }
+.profile-chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.profile-chips li {
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.limited-badge {
+  display: table;
+  margin: 0 auto 14px;
+  background: var(--pink);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  padding: 6px 20px;
+  box-shadow: 0 3px 10px rgba(232, 79, 134, 0.35);
+}
+.download-subhead {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 40px 0 18px;
+}
+.download-card.spaced { margin-top: 24px; }
+
+/* ===== 第7波：ツナマヨロボ／衣装バリエーション／三面図シートリンク ===== */
+.char-role.robo { background: #6b8f5e; }
+.sheet-link {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 0 12px;
+}
+.sheet-link:hover { text-decoration: underline; }
+.robo-forms .mini-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: linear-gradient(160deg, #f2f7ee 0%, #e8f4ff 100%);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.robo-forms .mini-card a {
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+}
+.robo-forms .mini-card a:hover { text-decoration: underline; }
+.costume-box {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #fffaf3;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+}
+.costume-box figure {
+  margin: 0;
+  background: linear-gradient(160deg, #ffeef5 0%, #e8f4ff 100%);
+  border-radius: 10px;
+  padding: 10px 10px 0;
+}
+.costume-box figure img {
+  max-height: 220px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+.costume-text { flex: 1; min-width: 240px; }
+.costume-text h5 { font-size: 1rem; margin-bottom: 6px; color: var(--blue-dark); }
+.costume-text p { color: var(--ink-soft); font-size: 0.92rem; }
+.costume-text .sheet-link { margin-bottom: 0; }
