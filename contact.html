@@ -136,7 +136,25 @@
       </article>
 
     </div>
-    <p class="section-more"><a href="works.html">制作例は作品ページで見られます →</a></p>
+  </div>
+</section>
+
+
+<!-- ================= 制作例 ================= -->
+<section id="examples">
+  <div class="wrap">
+    <h2 class="section-title">制作例</h2>
+    <p class="section-lead">実際に制作した作品です。動画はそのまま再生できます。</p>
+    <div class="showcase-video">
+      <div class="yt-lite" data-ytid="5T00DBx43gE" role="button" tabindex="0" aria-label="動画を再生する"><img src="https://i.ytimg.com/vi/5T00DBx43gE/hqdefault.jpg" alt="にゃんまちゃん自己紹介ソング（2026 ver）のサムネイル" loading="lazy"><span class="yt-play" aria-hidden="true">▶</span></div>
+    </div>
+    <p class="showcase-caption">キャラクターMV「にゃんまちゃん自己紹介ソング（2026 ver）」</p>
+    <div class="showcase-grid">
+      <a class="showcase-card" href="works.html"><img src="https://i.ytimg.com/vi/UxO-WKIP_so/hqdefault.jpg" alt="MV「キラキラ銀河全開FIGHT!!」のサムネイル" loading="lazy"><span><em>MV制作</em>キラキラ銀河全開FIGHT!!</span></a>
+      <a class="showcase-card" href="works.html"><img src="https://i.ytimg.com/vi/vrb0XMdnmh4/hqdefault.jpg" alt="ショート動画「Claw &amp; Fang（short ver.）」のサムネイル" loading="lazy"><span><em>ショート動画</em>Claw &amp; Fang（short ver.）</span></a>
+      <a class="showcase-card" href="works.html"><img src="assets/line-banner.webp" alt="LINEスタンプ告知バナー" loading="lazy"><span><em>告知画像</em>LINEスタンプ発売バナー</span></a>
+      <a class="showcase-card" href="works.html"><img src="assets/chara-card.webp" alt="キャラクターカード" loading="lazy"><span><em>キャラクター活用</em>キャラクターカード</span></a>
+    </div>
   </div>
 </section>
 
@@ -185,6 +203,18 @@
       <li>制作開始<span>お支払い確認をもって制作を開始します。</span></li>
       <li>納品・修正対応<span>完成品を納品します。修正対応も行います。</span></li>
     </ol>
+  </div>
+</section>
+
+
+<!-- ================= 中盤CTA ================= -->
+<section>
+  <div class="wrap">
+    <div class="cta-band">
+      <h3>まずは相談だけでも大丈夫です</h3>
+      <p>内容が固まっていなくてもお気軽にどうぞ。</p>
+      <a class="btn btn-pink btn-large" href="https://forms.gle/A2CHWfC8KEgkmSmv5" target="_blank" rel="noopener">📝 フォームで相談する</a>
+    </div>
   </div>
 </section>
 
@@ -279,6 +309,23 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+// YouTube ライト埋め込み: クリックでプレーヤーに切り替え
+document.querySelectorAll('.yt-lite').forEach(function (el) {
+  function play() {
+    var f = document.createElement('iframe');
+    f.className = 'yt-frame';
+    f.src = 'https://www.youtube-nocookie.com/embed/' + el.getAttribute('data-ytid') + '?autoplay=1&rel=0';
+    f.title = 'YouTube video player';
+    f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+    f.allowFullscreen = true;
+    el.replaceWith(f);
+  }
+  el.addEventListener('click', play);
+  el.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
+});
 </script>
 </body>
 </html>
