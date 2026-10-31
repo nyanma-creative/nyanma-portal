@@ -6,6 +6,12 @@
 <title>にゃんま～ずのお宝部屋 | にゃんまちゃん公式ポータル</title>
 <meta name="description" content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<meta property="og:title" content="にゃんま～ずのお宝部屋 | にゃんまちゃん公式ポータル">
+<meta property="og:description" content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！">
+<meta property="og:image" content="https://nyanma-creative.github.io/nyanma-portal/assets/chara-card.webp">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
 
@@ -30,9 +36,9 @@
 </div>
 
 <!-- ================= パスワード入口 ================= -->
-<!-- 静的サイトのため、パスワード照合は見た目だけの再現です。
-     入力後は「準備中です」のプレースホルダ表示になります（中身は未定）。 -->
-<section style="padding-top:26px;">
+<!-- 静的サイトのため、パスワード照合は見た目上の簡易 gate です（本物の認証ではありません）。
+     正解パスワードはページ下部のスクリプト内 TREASURE_PASSWORD で管理しています（現在は仮値）。 -->
+<section id="treasure-gate" style="padding-top:26px;">
   <div class="wrap">
     <div class="treasure-box">
       <div class="treasure-icon">🔐</div>
@@ -42,7 +48,24 @@
         <button class="btn btn-pink" type="submit">入る</button>
       </form>
       <p class="treasure-hint">💡 ヒント：にゃんま～ず向けのページだよ</p>
-      <p class="treasure-msg" id="treasure-msg">このページは準備中です。公開までもう少し待っててね！</p>
+      <p class="treasure-error" id="treasure-error">パスワードが違うみたい…もう一度試してみてね！</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= お宝部屋の中身（パスワード正解で表示） ================= -->
+<section id="treasure-content" class="treasure-content" hidden>
+  <div class="wrap">
+    <figure class="page-banner">
+      <img src="assets/treasure-hero.webp" alt="宝箱を開けるにゃんまちゃんと、相棒のツナマヨ">
+    </figure>
+    <h2 class="section-title">🎁 壁紙・素材ダウンロード</h2>
+    <p class="section-lead">にゃんま～ずへのプレゼント。お宝部屋だけの素材です。</p>
+    <div class="download-card">
+      <img src="assets/message-card-preview.webp" alt="「にゃんま〜ずのみんな いつも応援ありがとうやで！」にゃんま＆ツナマヨからのメッセージカード">
+      <h3>メッセージカード</h3>
+      <p>にゃんまちゃんとツナマヨからの、にゃんま～ずへのメッセージカードです。壁紙や素材としてダウンロードできます。</p>
+      <a class="btn btn-pink" href="assets/message-card-updated.webp" download>📥 ダウンロードする</a>
     </div>
   </div>
 </section>
@@ -63,9 +86,24 @@
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 【仮設定】お宝部屋の正解パスワード（見た目上の簡易照合です）
+  // ★本番パスワードはオーナー指定待ち：変更するときは、この1か所だけを書き換えてください。
+  var TREASURE_PASSWORD = 'nyanma';
+
   document.getElementById('treasure-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    document.getElementById('treasure-msg').classList.add('is-shown');
+    var input = document.getElementById('treasure-password').value;
+    var error = document.getElementById('treasure-error');
+    if (input === TREASURE_PASSWORD) {
+      error.classList.remove('is-shown');
+      document.getElementById('treasure-gate').hidden = true;
+      var content = document.getElementById('treasure-content');
+      content.hidden = false;
+      content.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      error.classList.add('is-shown');
+    }
   });
 </script>
 </body>
