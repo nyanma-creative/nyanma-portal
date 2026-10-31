@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>にゃんまポータル | にゃんまちゃん公式サイト</title>
+<meta name="description" content="にゃんまちゃんの公式ポータルサイト。毎日投稿のイラスト・4コマ漫画・YouTube動画など、にゃんまちゃんのコンテンツが全部ここに集まってるよ！">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Manus版と同様、モバイルでは専用のヒーロー画像に切り替える */
+  @media (max-width: 767px) {
+    .hero { background-image: url('assets/hero-mobile.webp') !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= ヘッダー ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.webp" alt="にゃんまちゃん公式ポータル"></a>
+    <nav class="main-nav">
+      <a href="index.html">トップ</a>
+      <a href="characters.html">キャラクター</a>
+      <a href="kyou.html">今日は何の日</a>
+      <a href="manga.html">4コマ漫画</a>
+      <a href="works.html">作品</a>
+      <a class="nav-cta" href="contact.html">💌 お仕事のご依頼</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= ヒーロー ================= -->
+<!-- 画像差し替え: assets/hero.webp を同名で上書きするだけで差し替わります -->
+<div class="hero wrap">
+  <span class="hero-site-name">🐾 にゃんまちゃん公式ポータル</span>
+  <h1>にゃんまちゃんの<span class="accent">世界</span>へようこそ！</h1>
+  <p class="hero-text">毎日投稿のイラスト・4コマ漫画・YouTube動画など、にゃんまちゃんのコンテンツが全部ここに集まってるよ！</p>
+  <figure class="hero-image">
+    <img src="assets/hero.webp" alt="宝箱を開けるにゃんまちゃんと、相棒のツナマヨのキービジュアル">
+  </figure>
+  <div class="hero-buttons">
+    <a class="btn btn-blue" href="#contents">コンテンツを見る</a>
+    <a class="btn btn-pink" href="contact.html">💌 お仕事のご依頼</a>
+  </div>
+</div>
+
+<!-- ================= お知らせ ================= -->
+<!-- お知らせの追加: 下の <ul class="news-list"> に <li> を1件追加するだけです -->
+<section id="news">
+  <div class="wrap">
+    <h2 class="section-title">📢 お知らせ</h2>
+    <p class="section-lead">最新のお知らせ・更新情報</p>
+    <ul class="news-list">
+      <li>
+        <span class="news-date">2026.10.31</span>
+        <span class="news-tag">サイト</span>
+        <span>にゃんまちゃん公式ポータルサイトをリニューアルしました。これからもよろしくお願いします！</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= キャラクター紹介 ================= -->
+<!-- キャラカード画像はManus版トップと同一素材（nyanma_new / 3_74a0c3f1 / deba87ca）を使用 -->
+<section id="characters">
+  <div class="wrap">
+    <h2 class="section-title">✨ キャラクター紹介</h2>
+    <p class="section-lead">にゃんまちゃんってどんなキャラ？</p>
+    <div class="char-grid">
+
+      <article class="char-card">
+        <figure><img src="assets/char-nyanma-card.webp" alt="にゃんまちゃん" loading="lazy"></figure>
+        <div class="char-body">
+          <span class="char-role">メインキャラクター</span>
+          <h3>にゃんまちゃん</h3>
+          <p class="char-quote">「にしし！楽しいこと探し中やで！」</p>
+          <p>研究所生まれの高知能AI搭載型生命体。事故で記憶欠損・関西弁化が発生し、現在は「まぁなんとかなるやで！」精神で毎日楽しく生きているポンコツな女の子。誕生日：2月22日 / 身長：155cm</p>
+          <a class="char-more" href="characters.html#nyanma">もっと見る →</a>
+        </div>
+      </article>
+
+      <article class="char-card">
+        <figure><img src="assets/char-tsunamayo-card.webp" alt="ツナマヨ" loading="lazy"></figure>
+        <div class="char-body">
+          <span class="char-role partner">相棒キャラクター</span>
+          <h3>ツナマヨ</h3>
+          <p class="char-quote">「ま〜！（まま大好き！）」</p>
+          <p>種族不明のふわふわもちもちないきもの。「ま〜」としか話さないが、にゃんまちゃんは猫耳ヘッドフォンの翻訳機能で言いたいことを理解できる。体のサイズを自由に変えられる不思議な存在。</p>
+          <a class="char-more" href="characters.html#tsunamayo">もっと見る →</a>
+        </div>
+      </article>
+
+      <article class="char-card">
+        <figure><img src="assets/char-micchan-card.webp" alt="みっちゃん" loading="lazy"></figure>
+        <div class="char-body">
+          <span class="char-role resident">町の住民</span>
+          <h3>みっちゃん</h3>
+          <p class="char-quote">「ほな、たこ焼き食べて元気出し！」</p>
+          <p>商店街でたこ焼き屋を営む、世話好きで情に厚い大阪のおばちゃん。口はちょっと悪いけど根はとても優しい。年齢：永遠の48歳（自称）</p>
+          <a class="char-more" href="characters.html#micchan">もっと見る →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= コンテンツ一覧 ================= -->
+<!-- カードの追加: <article class="content-card">…</article> をコピーして増やせます。
+     画像差し替え: assets/content-*.webp を同名で上書き。
+     サムネイル帯の追加: カード内の <div class="thumb-row"> に <img> を追加（4枚で1行） -->
+<section id="contents">
+  <div class="wrap">
+    <h2 class="section-title">🌟 コンテンツ一覧</h2>
+    <p class="section-lead">にゃんまちゃんのコンテンツをチェック！</p>
+    <div class="content-grid">
+
+      <article class="content-card">
+        <div class="thumb"><a href="kyou.html"><img src="assets/content-illustration.webp" alt="「今日は何の日？」のイラスト（七夕）"></a></div>
+        <div class="content-body">
+          <h3>今日は何の日？</h3>
+          <p>記念日にちなんだイラストを毎日Xに投稿中。にゃんまちゃんとツナマヨの掛け合いが楽しめる、一番の看板コンテンツです。</p>
+          <div class="thumb-row cols-3">
+            <a href="kyou.html"><img src="assets/illust-parfait.webp" alt="パフェの日のイラスト" loading="lazy"></a>
+            <a href="kyou.html"><img src="assets/illust-fireworks.webp" alt="花火の日のイラスト" loading="lazy"></a>
+            <a href="kyou.html"><img src="assets/illust-onigiri.webp" alt="おにぎりの日のイラスト" loading="lazy"></a>
+          </div>
+          <a class="content-link" href="kyou.html">イラストギャラリーを見る →</a>
+        </div>
+      </article>
+
+      <article class="content-card">
+        <div class="thumb"><a href="manga.html"><img src="assets/content-manga.webp" alt="4コマ漫画のイラスト（ツナマヨを抱きしめるにゃんまちゃん）"></a></div>
+        <div class="content-body">
+          <h3>4コマ漫画</h3>
+          <p>にゃんまちゃんとツナマヨの日常を描く4コマ漫画。ほのぼのした毎日と、時々起こる小さなハプニングをお届けします。</p>
+          <div class="thumb-row">
+            <a href="manga/ep01.html"><img src="assets/manga-ep01.webp" alt="4コマ漫画 第1話「にゃんまちゃん誕生」" loading="lazy"></a>
+            <a href="manga/ep25.html"><img src="assets/manga-ep25.webp" alt="4コマ漫画 第25話「梅雨入り」" loading="lazy"></a>
+            <a href="manga/ep26.html"><img src="assets/manga-ep26.webp" alt="4コマ漫画 第26話「ワールドカップ」" loading="lazy"></a>
+            <a href="manga/ep28.html"><img src="assets/manga-ep28.webp" alt="4コマ漫画 第28話「人気ドーナツへの道」" loading="lazy"></a>
+          </div>
+          <a class="content-link" href="manga.html">にゃんまりでいずを読む →</a>
+        </div>
+      </article>
+
+      <article class="content-card">
+        <div class="thumb"><a href="works.html"><img src="assets/content-mv.webp" alt="MV『硝子の祈り』のキービジュアル"></a></div>
+        <div class="content-body">
+          <h3>音楽・MV</h3>
+          <p>オリジナル楽曲とミュージックビデオを制作しています。代表作はMV『硝子の祈り』、自己紹介ソングなど。</p>
+          <a class="content-link" href="works.html">作品一覧を見る →</a>
+        </div>
+      </article>
+
+      <article class="content-card">
+        <div class="thumb"><a href="works.html"><img src="assets/content-video.webp" alt="ショート動画のキービジュアル"></a></div>
+        <div class="content-body">
+          <h3>ショート動画</h3>
+          <p>ダンス動画や季節のイベント動画など、短い動画もたくさん作っています。XとYouTubeで公開中です。</p>
+          <a class="content-link" href="works.html">作品一覧を見る →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= LINEスタンプ ================= -->
+<section id="line-stamps">
+  <div class="wrap">
+    <h2 class="section-title">💬 LINEスタンプ</h2>
+    <p class="section-lead">ツナマヨのかわいいLINEスタンプが登場！</p>
+    <div class="feature-box has-banner">
+      <img class="feature-banner" src="assets/line-banner.webp" alt="ツナマヨのLINEスタンプ発売中！" loading="lazy">
+      <div class="feature-text">
+        <h3>ツナマヨのLINEスタンプ発売中</h3>
+        <p>「ま〜！」の気持ちが伝わる、ツナマヨのLINEスタンプです。毎日のトークにどうぞ。</p>
+        <!-- プレースホルダ: ストアのURLが確定したら href を差し替えてください -->
+        <a class="btn btn-pink is-placeholder" href="#" data-placeholder="LINEスタンプのストアURL（store.line.me）を設定予定" aria-disabled="true">LINEスタンプを見る（準備中）</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= YouTube最新動画 ================= -->
+<section id="youtube">
+  <div class="wrap">
+    <h2 class="section-title">🎬 YouTube最新動画</h2>
+    <p class="section-lead">サムネイルをクリックするとここで再生できます！</p>
+    <!-- プレースホルダ: 動画IDが確定したら、この .video-placeholder を
+         <iframe src="https://www.youtube.com/embed/動画ID" ...> に差し替えてください。
+         Manus版で掲載されていた最新作品: 「にゃんまちゃん自己紹介ソング（2026 ver）」 -->
+    <div class="video-placeholder" data-placeholder="YouTube動画の埋め込みを設定予定">
+      <span class="vp-title">🎬 最新動画は準備中です</span>
+      <span>動画の埋め込みは近日公開予定です</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= お仕事のご依頼 ================= -->
+<section id="work">
+  <div class="wrap">
+    <div class="work-cta">
+      <h2 class="section-title">💌 お仕事のご依頼</h2>
+      <p>サムネイル制作・キャラクターデザイン・動画制作など<br>各種クリエイティブのご依頼を承っています！</p>
+      <a class="btn btn-pink" href="contact.html">お仕事依頼ページへ</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= フッター ================= -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">トップ</a>
+    <a href="characters.html">キャラクター</a>
+    <a href="kyou.html">今日は何の日</a>
+    <a href="manga.html">4コマ漫画</a>
+    <a href="works.html">作品</a>
+    <a href="contact.html">お仕事のご依頼</a>
+    <a href="https://x.com/nyanmayade" target="_blank" rel="noopener">X（@nyanmayade）</a>
+  </div>
+  <p>© <span id="year">2026</span> にゃんまクリエイティブ</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

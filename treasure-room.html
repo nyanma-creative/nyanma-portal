@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>にゃんま～ずのお宝部屋 | にゃんまちゃん公式ポータル</title>
+<meta name="description" content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= ヘッダー ================= -->
+<header class="site-header">
+  <div class="header-inner">
+    <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.webp" alt="にゃんまちゃん公式ポータル"></a>
+    <nav class="main-nav">
+      <a href="index.html">トップ</a>
+      <a href="characters.html">キャラクター</a>
+      <a href="kyou.html">今日は何の日</a>
+      <a href="manga.html">4コマ漫画</a>
+      <a href="works.html">作品</a>
+      <a class="nav-cta" href="contact.html">💌 お仕事のご依頼</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= タイトル ================= -->
+<div class="page-title wrap">
+  <h1>にゃんま～ずのお宝部屋</h1>
+</div>
+
+<!-- ================= パスワード入口 ================= -->
+<!-- 静的サイトのため、パスワード照合は見た目だけの再現です。
+     入力後は「準備中です」のプレースホルダ表示になります（中身は未定）。 -->
+<section style="padding-top:26px;">
+  <div class="wrap">
+    <div class="treasure-box">
+      <div class="treasure-icon">🔐</div>
+      <p>パスワードを入力してね！</p>
+      <form class="treasure-form" id="treasure-form">
+        <input type="password" id="treasure-password" placeholder="パスワード" autocomplete="off" aria-label="パスワード">
+        <button class="btn btn-pink" type="submit">入る</button>
+      </form>
+      <p class="treasure-hint">💡 ヒント：にゃんま～ず向けのページだよ</p>
+      <p class="treasure-msg" id="treasure-msg">このページは準備中です。公開までもう少し待っててね！</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= フッター ================= -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">トップ</a>
+    <a href="characters.html">キャラクター</a>
+    <a href="kyou.html">今日は何の日</a>
+    <a href="manga.html">4コマ漫画</a>
+    <a href="works.html">作品</a>
+    <a href="contact.html">お仕事のご依頼</a>
+    <a href="https://x.com/nyanmayade" target="_blank" rel="noopener">X（@nyanmayade）</a>
+  </div>
+  <p>© <span id="year">2026</span> にゃんまクリエイティブ</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('treasure-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('treasure-msg').classList.add('is-shown');
+  });
+</script>
+</body>
+</html>
