@@ -853,6 +853,10 @@ section { padding: 56px 0 8px; }
 .fan-message img { width: 100%; height: auto; border-radius: 12px; margin-bottom: 14px; }
 .fan-message p { color: var(--ink-soft); font-size: 0.95rem; }
 
+/* ---------- お宝部屋への入口（トップ） ---------- */
+.treasure-entry { max-width: 820px; margin: 22px auto 0; text-align: center; }
+.treasure-entry p { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 12px; }
+
 /* ---------- お宝部屋（中身） ---------- */
 .treasure-error { display: none; margin-top: 14px; color: var(--red); font-weight: 700; }
 .treasure-error.is-shown { display: block; }
