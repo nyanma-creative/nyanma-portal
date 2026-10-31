@@ -1229,3 +1229,10 @@ section { padding: 56px 0 8px; }
 }
 .anchor-nav a:hover { border-color: var(--pink); color: var(--pink-dark); }
 .profile { scroll-margin-top: 92px; }
+
+/* ---------- 作品ページ：ショート動画（第11波） ---------- */
+.shorts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 16px; max-width: 1000px; margin: 0 auto; }
+.short-card { display: block; text-decoration: none; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgba(90, 50, 90, 0.08); transition: transform 0.15s ease; }
+.short-card:hover { transform: translateY(-3px); }
+.short-card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; display: block; background: var(--cream); }
+.short-card span { display: block; padding: 10px 12px; color: var(--ink); font-weight: 600; font-size: 0.88rem; line-height: 1.45; }
