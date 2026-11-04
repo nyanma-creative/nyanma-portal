@@ -5,20 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>にゃんまポータル | にゃんまちゃん公式サイト</title>
 <meta name="description" content="にゃんまちゃんの公式ポータルサイト。毎日投稿のイラスト・4コマ漫画・YouTube動画など、にゃんまちゃんのコンテンツが全部ここに集まってるよ！">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=stage-3">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <meta property="og:title" content="にゃんまポータル | にゃんまちゃん公式サイト">
 <meta property="og:description" content="にゃんまちゃんの公式ポータルサイト。毎日投稿のイラスト・4コマ漫画・YouTube動画など、にゃんまちゃんのコンテンツが全部ここに集まってるよ！">
-<meta property="og:image" content="https://nyanma-creative.github.io/nyanma-portal/assets/chara-card.webp">
+<meta property="og:image" content="https://nyanma-creative.github.io/nyanma-portal/assets/stage-hero.webp">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<style>
-  /* Manus版と同様、モバイルでは専用のヒーロー画像に切り替える */
-  @media (max-width: 767px) {
-    .hero { background-image: url('assets/hero-mobile.webp') !important; }
-  }
-</style>
-
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8FFS3LLML"></script>
 <script>
@@ -28,14 +21,15 @@
   gtag('config', 'G-Z8FFS3LLML');
 </script>
 </head>
-<body>
+<body class="portal-home">
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <!-- ================= ヘッダー ================= -->
 <header class="site-header">
   <div class="header-inner">
     <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.webp" alt="にゃんまちゃん公式ポータル"></a>
-    <nav class="main-nav">
-      <a href="index.html">トップ</a>
+    <nav class="main-nav" aria-label="メインメニュー">
+      <a href="index.html" aria-current="page">トップ</a>
       <a href="characters.html">キャラクター</a>
       <a href="kyou.html">今日は何の日</a>
       <a href="manga.html">4コマ漫画</a>
@@ -46,26 +40,38 @@
   </div>
 </header>
 
-<!-- ================= ヒーロー ================= -->
-<!-- 画像差し替え: assets/hero.webp を同名で上書きするだけで差し替わります -->
-<div class="hero wrap">
-  <span class="hero-site-name">🐾 にゃんまちゃん公式ポータル</span>
-  <h1>にゃんまちゃんの<span class="accent">世界</span>へようこそ！</h1>
-  <p class="hero-sub">ポンコツかわいいAI生命体・にゃんまちゃんと、相棒ツナマヨの毎日をお届けします！</p>
-  <p class="hero-text">毎日投稿のイラスト・4コマ漫画・YouTube動画など、にゃんまちゃんのコンテンツが全部ここに集まってるよ！</p>
-  <figure class="hero-image">
-    <img src="assets/hero.webp" alt="空と雲を背景に、手を差し出すにゃんまちゃんと、相棒のツナマヨのキービジュアル">
-  </figure>
-  <div class="hero-buttons">
-    <a class="btn btn-blue" href="#contents">コンテンツを見る</a>
-    <a class="btn btn-pink" href="contact.html">💌 お仕事のご依頼</a>
+<main id="main">
+<section class="stage" aria-labelledby="stage-title">
+  <div class="stage-art">
+    <img src="assets/stage-hero.webp" alt="青いパーカーで手を振るにゃんまちゃんと、相棒のツナマヨ" fetchpriority="high">
   </div>
-</div>
+  <div class="wrap stage-inner">
+    <div class="stage-copy">
+      <p class="stage-label"><span></span> NYANMA-CHAN OFFICIAL</p>
+      <h1 id="stage-title">にゃんまちゃん</h1>
+      <p class="stage-call">おるか〜？</p>
+      <p class="stage-intro">関西弁のAI生命体・にゃんまちゃんと<br class="stage-break">相棒ツナマヨの公式ポータル。</p>
+      <div class="stage-actions">
+        <a class="btn stage-primary" href="#contents">活動を見る <span aria-hidden="true">↘</span></a>
+        <a class="btn stage-secondary" href="contact.html">お仕事のご依頼 <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<nav class="stage-index" aria-label="トップページの見どころ">
+  <div class="wrap">
+    <a href="#world"><span>01</span> はじめまして</a>
+    <a href="#news"><span>02</span> お知らせ</a>
+    <a href="#characters"><span>03</span> キャラクター</a>
+    <a href="#contents"><span>04</span> 活動</a>
+  </div>
+</nav>
 
 <!-- ================= にゃんまちゃんの世界 ================= -->
 <section id="world">
   <div class="wrap">
-    <h2 class="section-title">🐾 にゃんまちゃんの世界</h2>
+    <p class="section-kicker" aria-hidden="true">01 / WORLD</p>
+    <h2 class="section-title">にゃんまちゃんの世界</h2>
     <p class="section-lead">ここは、ポンコツかわいいAI生命体・にゃんまちゃんと、相棒のツナマヨが暮らす世界。はじめての人も、ここからどうぞ！</p>
 
     <div class="story-box world-story">
@@ -75,9 +81,11 @@
     </div>
 
     <div class="world-grid">
+      <!-- Reserved for the rainy-alley meeting illustration. -->
+      <div class="world-illustration" aria-hidden="true"></div>
       <div class="world-card">
         <h3>☂️ 雨の日の出会い</h3>
-        <p>ある雨の日、にゃんまちゃんは道端のダンボールの中でひとりぼっちのツナマヨを発見。「おなかすいてるんか？」とツナマヨおにぎりを差し出すと大喜びで食べ、その様子を見て「ほな、お前の名前はツナマヨやな！」と命名しました。それからずっと一緒に暮らしています。「ま〜」としか話さないツナマヨの気持ちも、猫耳ヘッドフォンの翻訳機能でなんとなく理解できます。</p>
+        <p>ある雨の日、傘を差して路地裏を歩いていたにゃんまちゃんは、ダンボールの中でひとりぼっちのツナマヨを見つけました。「おなかすいてるんか？」とツナマヨおにぎりを差し出すと大喜びで食べ、その様子を見て「ほな、お前の名前はツナマヨやな！」と命名しました。それからずっと一緒に暮らしています。「ま〜」としか話さないツナマヨの気持ちも、猫耳ヘッドフォンの翻訳機能でなんとなく理解できます。</p>
         <a class="char-more" href="characters.html#tsunamayo">ツナマヨをもっと見る →</a>
       </div>
       <div class="world-card">
@@ -95,7 +103,7 @@
     </div>
 
     <div class="treasure-entry">
-      <p>パスワード制のファンページ。壁紙などのお宝があります。</p>
+      <p>パスワード制のファンページ。メッセージカードや「ま〜！占い」が楽しめます。</p>
       <a class="btn btn-pink" href="treasure-room.html">🔐 にゃんま～ずのお宝部屋</a>
     </div>
   </div>
@@ -105,31 +113,32 @@
 <!-- お知らせの追加: 下の <ul class="news-list"> に <li> を1件追加するだけです -->
 <section id="news">
   <div class="wrap">
-    <h2 class="section-title">📢 お知らせ</h2>
+    <p class="section-kicker" aria-hidden="true">02 / NEWS</p>
+    <h2 class="section-title">お知らせ</h2>
     <p class="section-lead">最新のお知らせ・更新情報</p>
     <ul class="news-list">
       <li>
-        <span class="news-date">2026.11.01</span>
+        <time class="news-date" datetime="2026-11-01">2026.11.01</time>
         <span class="news-tag tag-works">作品</span>
         <span>作品ページにショート動画コーナーと、お宝部屋に「ま〜！占い」が加わりました</span>
       </li>
       <li>
-        <span class="news-date">2026.11.01</span>
+        <time class="news-date" datetime="2026-11-01">2026.11.01</time>
         <span class="news-tag tag-site">サイト</span>
         <span>キャラクター紹介にツナマヨロボが加わりました</span>
       </li>
       <li>
-        <span class="news-date">2026.11.01</span>
+        <time class="news-date" datetime="2026-11-01">2026.11.01</time>
         <span class="news-tag tag-site">サイト</span>
         <span>ポータルサイトをリニューアル公開しました</span>
       </li>
       <li>
-        <span class="news-date">2026.11.01</span>
+        <time class="news-date" datetime="2026-11-01">2026.11.01</time>
         <span class="news-tag tag-site">サイト</span>
         <span>にゃんま～ずのお宝部屋がオープンしました</span>
       </li>
       <li>
-        <span class="news-date">2026.11.01</span>
+        <time class="news-date" datetime="2026-11-01">2026.11.01</time>
         <span class="news-tag tag-works">作品</span>
         <span>作品ページでMVが見られるようになりました</span>
       </li>
@@ -141,7 +150,8 @@
 <!-- キャラカード画像はManus版トップと同一素材（nyanma_new / 3_74a0c3f1 / deba87ca）を使用 -->
 <section id="characters">
   <div class="wrap">
-    <h2 class="section-title">✨ キャラクター紹介</h2>
+    <p class="section-kicker" aria-hidden="true">03 / CHARACTERS</p>
+    <h2 class="section-title">キャラクター紹介</h2>
     <p class="section-lead">にゃんまちゃんってどんなキャラ？</p>
     <div class="char-grid">
 
@@ -161,7 +171,7 @@
         <div class="char-body">
           <span class="char-role partner">相棒キャラクター</span>
           <h3>ツナマヨ</h3>
-          <p class="char-quote">「ま〜！（まま大好き！）」</p>
+          <p class="char-quote">「ま〜！」</p>
           <p>種族不明のふわふわもちもちないきもの。「ま〜」としか話さないが、にゃんまちゃんは猫耳ヘッドフォンの翻訳機能で言いたいことを理解できる。体のサイズを自由に変えられる不思議な存在。</p>
           <a class="char-more" href="characters.html#tsunamayo">もっと見る →</a>
         </div>
@@ -198,7 +208,8 @@
      サムネイル帯の追加: カード内の <div class="thumb-row"> に <img> を追加（4枚で1行） -->
 <section id="contents">
   <div class="wrap">
-    <h2 class="section-title">🌟 にゃんまちゃんの活動</h2>
+    <p class="section-kicker" aria-hidden="true">04 / ACTIVITIES</p>
+    <h2 class="section-title">にゃんまちゃんの活動</h2>
     <p class="section-lead">今のにゃんまちゃんは、こんな活動をしています</p>
     <div class="content-grid">
 
@@ -260,7 +271,8 @@
 <!-- ================= LINEスタンプ ================= -->
 <section id="line-stamps">
   <div class="wrap">
-    <h2 class="section-title">💬 LINEスタンプ</h2>
+    <p class="section-kicker" aria-hidden="true">05 / LINE STICKERS</p>
+    <h2 class="section-title">LINEスタンプ</h2>
     <p class="section-lead">ツナマヨのかわいいLINEスタンプが登場！</p>
     <div class="feature-box has-banner">
       <a href="https://store.line.me/stickershop/product/34089654/ja" target="_blank" rel="noopener" aria-label="ツナマヨのLINEスタンプ販売ページへ"><img class="feature-banner" src="assets/line-banner.webp" alt="ツナマヨのLINEスタンプ発売中！" loading="lazy"></a>
@@ -277,13 +289,21 @@
 <!-- ================= YouTube最新動画 ================= -->
 <section id="youtube">
   <div class="wrap">
-    <h2 class="section-title">🎬 YouTube最新動画</h2>
-    <p class="section-lead">サムネイルをクリックするとここで再生できます！</p>
-    <!-- プレースホルダ: 動画IDが確定したら、この .video-placeholder を
-         <iframe src="https://www.youtube.com/embed/動画ID" ...> に差し替えてください。
-         Manus版で掲載されていた最新作品: 「にゃんまちゃん自己紹介ソング（2026 ver）」 -->
-    <div class="video-box"><div class="yt-lite" data-ytid="5T00DBx43gE" role="button" tabindex="0" aria-label="動画を再生する"><img src="https://i.ytimg.com/vi/5T00DBx43gE/hqdefault.jpg" alt="にゃんまちゃん自己紹介ソング（2026 ver）のサムネイル" loading="lazy"><span class="yt-play" aria-hidden="true">▶</span></div></div>
-    <p style="text-align:center; margin-top:22px;">
+    <p class="section-kicker" aria-hidden="true">06 / MOVIES</p>
+    <h2 class="section-title">動画</h2>
+    <p class="section-lead">にゃんまちゃんの自己紹介や作品を、動画で楽しんでな！</p>
+    <div class="home-movies">
+      <div class="movie-item">
+        <h3>自己紹介ソング（2026 ver）</h3>
+        <div class="video-box"><div class="yt-lite" data-ytid="5T00DBx43gE" role="button" tabindex="0" aria-label="動画を再生する"><img src="https://i.ytimg.com/vi/5T00DBx43gE/hqdefault.jpg" alt="にゃんまちゃん自己紹介ソング（2026 ver）のサムネイル" loading="lazy"><span class="yt-play" aria-hidden="true">▶</span></div></div>
+      </div>
+      <div class="movie-item">
+        <h3>新しい紹介ムービー</h3>
+        <!-- 動画公開時は .reserved-video を16:9のプレーヤーに差し替え -->
+        <div class="reserved-video"><span>COMING SOON</span><small>動画準備中</small></div>
+      </div>
+    </div>
+    <p class="movie-channel">
       <a class="btn btn-blue" href="https://www.youtube.com/@にゃんまちゃん" target="_blank" rel="noopener">YouTubeチャンネルはこちら</a>
     </p>
   </div>
@@ -292,13 +312,19 @@
 <!-- ================= お仕事のご依頼 ================= -->
 <section id="work">
   <div class="wrap">
-    <div class="work-cta">
-      <h2 class="section-title">💌 お仕事のご依頼</h2>
-      <p>サムネイル制作・キャラクターデザイン・動画制作など<br>各種クリエイティブのご依頼を承っています！</p>
-      <a class="btn btn-pink" href="contact.html">お仕事依頼ページへ</a>
+    <div class="stage-work">
+      <img src="assets/stage-gaming.webp" alt="ゲーマー衣装でコントローラーを手にしたにゃんまちゃん" loading="lazy">
+      <div class="stage-work-copy">
+        <p class="section-kicker" aria-hidden="true">07 / CONTACT</p>
+        <h2 class="section-title">お仕事のご依頼</h2>
+        <p>商品・サービスのPR、動画や画像の制作、キャラクター活用など。個人・企業の方からご相談を承っています。</p>
+        <a class="btn btn-pink" href="contact.html">依頼できることを見る <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ================= フッター ================= -->
 <footer class="site-footer">

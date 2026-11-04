@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お仕事のご依頼 | にゃんまちゃん公式ポータル</title>
 <meta name="description" content="にゃんまクリエイティブへのお仕事のご依頼ページ。SNS投稿画像、キャラクター活用、YouTubeサムネイル、ショート動画・PR動画、楽曲・MV制作などのご相談を承っています。">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=stage-4">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <meta property="og:title" content="お仕事のご依頼 | にゃんまちゃん公式ポータル">
 <meta property="og:description" content="にゃんまクリエイティブへのお仕事のご依頼ページ。SNS投稿画像、キャラクター活用、YouTubeサムネイル、ショート動画・PR動画、楽曲・MV制作などのご相談を承っています。">
@@ -22,34 +22,51 @@
   gtag('config', 'G-Z8FFS3LLML');
 </script>
 </head>
-<body>
+<body class="portal-contact">
+<a class="skip-link" href="#main">本文へ移動</a>
 
 <!-- ================= ヘッダー ================= -->
 <header class="site-header">
   <div class="header-inner">
     <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.webp" alt="にゃんまちゃん公式ポータル"></a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="メインメニュー">
       <a href="index.html">トップ</a>
       <a href="characters.html">キャラクター</a>
       <a href="kyou.html">今日は何の日</a>
       <a href="manga.html">4コマ漫画</a>
       <a href="works.html">作品</a>
       <a href="treasure-room.html">🔐 お宝部屋</a>
-      <a class="nav-cta" href="contact.html">💌 お仕事のご依頼</a>
+      <a class="nav-cta" href="contact.html" aria-current="page">💌 お仕事のご依頼</a>
     </nav>
   </div>
 </header>
 
-<!-- ================= タイトル ================= -->
-<div class="page-title wrap">
-  <h1>💌 お仕事のご依頼</h1>
-  <p class="page-lead">制作に関するご相談は、フォームまたはXのDMからお気軽にご連絡ください。内容が固まっていない段階のご相談も歓迎しています。</p>
-  <div class="hero-cta">
-    <a class="btn btn-pink btn-large" href="https://forms.gle/A2CHWfC8KEgkmSmv5" target="_blank" rel="noopener">📝 まずは相談してみる</a>
+<main id="main">
+<section class="commission-hero" aria-labelledby="commission-title">
+  <div class="wrap commission-inner">
+    <div>
+      <p class="section-kicker">NYANMA CREATIVE / お仕事のご依頼</p>
+      <h1 id="commission-title">想像を、カタチに。<br>想いを、こころへ。</h1>
+      <p>商品・サービスのPRから、動画・画像制作、キャラクターの活用まで。個人・企業の方からのお仕事のご相談をお待ちしています。</p>
+      <div class="stage-actions">
+        <a class="btn btn-pink" href="https://forms.gle/A2CHWfC8KEgkmSmv5" target="_blank" rel="noopener">依頼フォームへ ↗</a>
+        <a class="btn stage-secondary" href="#services">依頼できること ↓</a>
+      </div>
+    </div>
+    <img src="assets/stage-gaming.webp" alt="ゲーマー衣装のにゃんまちゃん" width="960" height="540">
   </div>
-  <p style="text-align:center; margin-top:16px;"><a href="#forwho">こんなご相談ができます</a> ・ <a href="#services">依頼できること</a> ・ <a href="#examples">制作例</a> ・ <a href="#price">料金の目安</a> ・ <a href="#recommend">こんな方におすすめ</a> ・ <a href="#flow">依頼の流れ</a> ・ <a href="#faq">よくある質問</a> ・ <a href="#contact-cta">ご相談はこちらから</a></p>
-</div>
-
+</section>
+<nav class="stage-index" aria-label="依頼ページの目次">
+  <div class="wrap">
+    <a href="#forwho">相談例</a>
+    <a href="#examples">制作例</a>
+    <a href="#price">料金の目安</a>
+    <a href="#recommend">こんな方におすすめ</a>
+    <a href="#flow">依頼の流れ</a>
+    <a href="#faq">よくある質問</a>
+    <a href="#contact-cta">ご相談窓口</a>
+  </div>
+</nav>
 
 <!-- ================= 用途別ガイド ================= -->
 <section id="forwho">
@@ -196,6 +213,15 @@
       <a class="showcase-card" href="works.html"><img src="assets/chara-card.webp" alt="キャラクターカード" loading="lazy"><span><em>キャラクター活用</em>キャラクターカード</span></a>
     </div>
     <p style="text-align:center; margin-top:24px;"><a class="btn btn-pink" href="https://forms.gle/A2CHWfC8KEgkmSmv5" target="_blank" rel="noopener">📝 フォームで相談する</a></p>
+    <div class="commission-reel movie-item">
+      <h3 id="commission-reel-title">PR・制作実例ムービー</h3>
+      <video controls playsinline preload="none" width="1920" height="1080"
+        poster="assets/mouse-pr-poster.webp" aria-labelledby="commission-reel-title" aria-describedby="commission-reel-caption">
+        <source src="assets/mouse-pr-watermarked.mp4" type="video/mp4">
+        <a href="assets/mouse-pr-watermarked.mp4">PR・制作実例ムービーを開く</a>
+      </video>
+      <p id="commission-reel-caption">ワイヤレスゲーミングマウスのPR動画（自主制作サンプル・15秒）</p>
+    </div>
   </div>
 </section>
 
@@ -335,7 +361,10 @@
   </div>
 </section>
 
+</main>
+
 <!-- ================= フッター ================= -->
+
 <footer class="site-footer">
   <div class="footer-links">
     <a href="index.html">トップ</a>
