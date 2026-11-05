@@ -1,127 +1,90 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>にゃんま～ずのお宝部屋 | にゃんまちゃん公式ポータル</title>
-<meta name="description" content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="assets/favicon.png">
-<meta property="og:title" content="にゃんま～ずのお宝部屋 | にゃんまちゃん公式ポータル">
-<meta property="og:description" content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！">
-<meta property="og:image" content="https://nyanma-creative.github.io/nyanma-portal/assets/chara-card.webp">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-
+<meta content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！" name="description"/>
+<link href="style.css?v=20261106" rel="stylesheet"/>
+<link href="assets/favicon.png" rel="icon" type="image/png"/>
+<meta content="にゃんま～ずのお宝部屋 | にゃんまちゃん公式ポータル" property="og:title"/>
+<meta content="にゃんま～ず向けのページ「にゃんま～ずのお宝部屋」の入口です。パスワードを入力してね！" property="og:description"/>
+<meta content="https://nyanma-creative.github.io/nyanma-portal/assets/chara-card.webp" property="og:image"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z8FFS3LLML"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Z8FFS3LLML"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-Z8FFS3LLML');
 </script>
-</head>
-<body>
-
+<link href="design.css?v=20261106" rel="stylesheet"/><link href="https://nyanma-creative.github.io/nyanma-portal/treasure-room.html" rel="canonical"/></head>
+<body class="redesign page-treasure-room"><a class="skip-link" href="#main">本文へ移動</a>
 <!-- ================= ヘッダー ================= -->
-<header class="site-header">
-  <div class="header-inner">
-    <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.webp" alt="にゃんまちゃん公式ポータル"></a>
-    <nav class="main-nav">
-      <a href="index.html">トップ</a>
-      <a href="characters.html">キャラクター</a>
-      <a href="kyou.html">今日は何の日</a>
-      <a href="manga.html">4コマ漫画</a>
-      <a href="works.html">作品</a>
-      <a href="treasure-room.html">🔐 お宝部屋</a>
-      <a class="nav-cta" href="contact.html">💌 お仕事のご依頼</a>
-    </nav>
-  </div>
-</header>
-
+<header class="site-header"><div class="header-inner"><a class="brand" href="index.html"><img alt="" height="40" src="assets/favicon.png" width="40"/><span>にゃんまポータル<small>NYANMA-CHAN OFFICIAL</small></span></a><button aria-controls="main-nav" aria-expanded="false" class="menu-toggle">メニュー <span aria-hidden="true">☰</span></button><nav aria-label="メインメニュー" class="main-nav" id="main-nav"><a href="index.html">ホーム</a><a href="characters.html">キャラクター</a><a href="works.html">映像・音楽</a><a href="kyou.html">今日は何の日</a><a href="manga.html">4コマ漫画</a><a aria-current="page" href="treasure-room.html">お宝部屋</a><a class="nav-cta" href="contact.html">お仕事のご依頼 ↗</a></nav></div></header><main id="main">
 <!-- ================= タイトル ================= -->
 <div class="page-title wrap">
-  <h1>にゃんま～ずのお宝部屋</h1>
+<h1>にゃんま～ずのお宝部屋</h1>
 </div>
-
 <!-- ================= パスワード入口 ================= -->
 <!-- 静的サイトのため、パスワード照合は見た目上の簡易 gate です（本物の認証ではありません）。
      正解パスワードはページ下部のスクリプト内 TREASURE_PASSWORD で管理しています（現在は仮値）。 -->
 <section id="treasure-gate" style="padding-top:26px;">
-  <div class="wrap">
-    <div class="treasure-box">
-      <div class="treasure-icon">🔐</div>
-      <p>パスワードを入力してね！</p>
-      <form class="treasure-form" id="treasure-form">
-        <input type="password" id="treasure-password" placeholder="パスワード" autocomplete="off" aria-label="パスワード">
-        <button class="btn btn-pink" type="submit">入る</button>
-      </form>
-      <p class="treasure-hint">💡 ヒント：にゃんま～ず向けのページだよ</p>
-      <p class="treasure-error" id="treasure-error">パスワードが違うみたい…もう一度試してみてね！</p>
-    </div>
-  </div>
+<div class="wrap">
+<div class="treasure-box">
+<div class="treasure-icon">🔐</div>
+<p>パスワードを入力してね！</p>
+<form class="treasure-form" id="treasure-form">
+<input aria-label="パスワード" autocomplete="off" id="treasure-password" placeholder="パスワード" type="password"/>
+<button class="btn btn-pink" type="submit">入る</button>
+</form>
+<p class="treasure-hint">💡 ヒント：にゃんま～ず向けのページだよ</p>
+<p class="treasure-error" id="treasure-error">パスワードが違うみたい…もう一度試してみてね！</p>
+</div>
+</div>
 </section>
-
 <!-- ================= お宝部屋の中身（パスワード正解で表示） ================= -->
-<section id="treasure-content" class="treasure-content" hidden>
-  <div class="wrap">
-    <figure class="page-banner">
-      <img src="assets/treasure-hero.webp" alt="宝箱を開けるにゃんまちゃんと、相棒のツナマヨ">
-    </figure>
-    <p class="limited-badge">🔒 にゃんま～ず限定</p>
-    <h2 class="section-title">🎁 壁紙・素材ダウンロード</h2>
-    <p class="section-lead">にゃんま～ずへのプレゼント。お宝部屋だけの素材です。</p>
-    <div class="download-card">
-      <img src="assets/message-card-preview.webp" alt="「にゃんま〜ずのみんな いつも応援ありがとうやで！」にゃんま＆ツナマヨからのメッセージカード">
-      <h3>メッセージカード</h3>
-      <p>にゃんまちゃんとツナマヨからの、にゃんま～ずへのメッセージカードです。壁紙や素材としてダウンロードできます。</p>
-      <a class="btn btn-pink" href="assets/message-card-updated.webp" download>📥 ダウンロードする</a>
-    </div>
-
-    <h3 class="download-subhead">SNSアイコン・ヘッダー用素材</h3>
-    <div class="download-card">
-      <img src="assets/logo.webp" alt="にゃんまちゃん公式ロゴ">
-      <h3>公式ロゴ</h3>
-      <p>にゃんまちゃんの公式ロゴです。SNSのアイコンやヘッダーなどにどうぞ。</p>
-      <a class="btn btn-pink" href="assets/logo.webp" download>📥 ダウンロードする</a>
-    </div>
-    <div class="download-card spaced">
-      <img src="assets/chara-card.webp" alt="にゃんまちゃんとツナマヨのキャラカード">
-      <h3>キャラカード</h3>
-      <p>にゃんまちゃんとツナマヨのキャラカードです。SNSのヘッダーなどにどうぞ。</p>
-      <a class="btn btn-pink" href="assets/chara-card.webp" download>📥 ダウンロードする</a>
-    </div>
-
-    <h2 class="section-title fortune-title">🔮 ツナマヨの「ま〜！」占い</h2>
-    <p class="section-lead">ボタンを押すと、ツナマヨが今日の「ま〜！」を教えてくれるよ。何回でも試せます。</p>
-    <div class="fortune-box">
-      <img id="fortune-img" src="assets/tsunamayo-bustup.webp" alt="ツナマヨ">
-      <p class="fortune-result" id="fortune-result">ツナマヨが待ってるよ。「ま〜！」を聞いてみてね。</p>
-      <button class="btn btn-pink" type="button" id="fortune-btn">ま〜！を聞く</button>
-    </div>
-  </div>
+<section class="treasure-content" hidden="" id="treasure-content">
+<div class="wrap">
+<figure class="page-banner">
+<img alt="宝箱を開けるにゃんまちゃんと、相棒のツナマヨ" src="assets/treasure-hero.webp"/>
+</figure>
+<p class="limited-badge">🔒 にゃんま～ず限定</p>
+<h2 class="section-title">🎁 壁紙・素材ダウンロード</h2>
+<p class="section-lead">にゃんま～ずへのプレゼント。お宝部屋だけの素材です。</p>
+<div class="download-card">
+<img alt="「にゃんま〜ずのみんな いつも応援ありがとうやで！」にゃんま＆ツナマヨからのメッセージカード" src="assets/message-card-preview.webp"/>
+<h3>メッセージカード</h3>
+<p>にゃんまちゃんとツナマヨからの、にゃんま～ずへのメッセージカードです。壁紙や素材としてダウンロードできます。</p>
+<a class="btn btn-pink" download="" href="assets/message-card-updated.webp">📥 ダウンロードする</a>
+</div>
+<h3 class="download-subhead">SNSアイコン・ヘッダー用素材</h3>
+<div class="download-card">
+<img alt="にゃんまちゃん公式ロゴ" src="assets/logo.webp"/>
+<h3>公式ロゴ</h3>
+<p>にゃんまちゃんの公式ロゴです。SNSのアイコンやヘッダーなどにどうぞ。</p>
+<a class="btn btn-pink" download="" href="assets/logo.webp">📥 ダウンロードする</a>
+</div>
+<div class="download-card spaced">
+<img alt="にゃんまちゃんとツナマヨのキャラカード" src="assets/chara-card.webp"/>
+<h3>キャラカード</h3>
+<p>にゃんまちゃんとツナマヨのキャラカードです。SNSのヘッダーなどにどうぞ。</p>
+<a class="btn btn-pink" download="" href="assets/chara-card.webp">📥 ダウンロードする</a>
+</div>
+<h2 class="section-title fortune-title">🔮 ツナマヨの「ま〜！」占い</h2>
+<p class="section-lead">ボタンを押すと、ツナマヨが今日の「ま〜！」を教えてくれるよ。何回でも試せます。</p>
+<div class="fortune-box">
+<img alt="ツナマヨ" id="fortune-img" src="assets/tsunamayo-bustup.webp"/>
+<p class="fortune-result" id="fortune-result">ツナマヨが待ってるよ。「ま〜！」を聞いてみてね。</p>
+<button class="btn btn-pink" id="fortune-btn" type="button">ま〜！を聞く</button>
+</div>
+</div>
 </section>
-
 <!-- ================= フッター ================= -->
-<footer class="site-footer">
-  <div class="footer-links">
-    <a href="index.html">トップ</a>
-    <a href="characters.html">キャラクター</a>
-    <a href="kyou.html">今日は何の日</a>
-    <a href="manga.html">4コマ漫画</a>
-    <a href="works.html">作品</a>
-    <a href="contact.html">お仕事のご依頼</a>
-    <a href="https://x.com/nyanmayade" target="_blank" rel="noopener">X（@nyanmayade）</a>
-  </div>
-  <div class="footer-band">
-    <a class="footer-band-btn" href="https://x.com/nyanmayade" target="_blank" rel="noopener">X フォローしてね</a>
-    <a class="footer-band-btn" href="https://www.youtube.com/@にゃんまちゃん" target="_blank" rel="noopener">YouTubeチャンネル</a>
-    <a class="footer-band-btn footer-band-cta" href="contact.html">💌 お仕事のご依頼</a>
-  </div>
-  <p>© <span id="year">2026</span> にゃんまクリエイティブ</p>
-</footer>
-
+</main><footer class="site-footer"><div class="wrap footer-main"><div><a class="footer-brand" href="index.html">にゃんまポータル<span>NYANMA-CHAN OFFICIAL</span></a><p>きみの毎日に、にゃんまをひとさじ。</p></div><div class="footer-links"><a href="index.html">ホーム</a><a href="characters.html">キャラクター</a><a href="works.html">映像・音楽</a><a href="kyou.html">今日は何の日</a><a href="manga.html">4コマ漫画</a><a href="treasure-room.html">お宝部屋</a><a href="contact.html">お仕事のご依頼</a><a href="https://x.com/nyanmayade" rel="noopener" target="_blank">X ↗</a><a href="https://www.youtube.com/@にゃんまちゃん" rel="noopener" target="_blank">YouTube ↗</a></div></div><div class="wrap footer-bottom"><span>© <span id="year">2026</span> にゃんまクリエイティブ</span><a href="#main">BACK TO TOP ↑</a></div></footer>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -160,6 +123,6 @@
     });
   }
 </script>
-</body>
+<script defer="" src="site.js?v=20261106"></script></body>
 </html>
 <!-- deploy trigger 2026-11-05: stuck Pages deployment recovery -->
