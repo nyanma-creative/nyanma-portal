@@ -5,8 +5,17 @@ window.NYANMA_DAYS = [
     "day": 6,
     "title": "お見合い記念日",
     "theme": "misc",
-    "src": "assets/kyou/stock-1106-30.webp",
-    "full": "assets/kyou/stock-1106-30-full.webp"
+    "src": "assets/kyou/stock-1106-30.webp?v=20261107",
+    "full": "assets/kyou/stock-1106-30-full.webp?v=20261107"
+  },
+  {
+    "id": "nov05-ocarina",
+    "month": 11,
+    "day": 5,
+    "title": "ゼルダの伝説 時のオカリナ（発売記念イラスト）",
+    "theme": "game",
+    "src": "assets/kyou/nov05-ocarina.webp",
+    "full": "assets/kyou/nov05-ocarina-full.webp"
   },
   {
     "id": "stock-1104-28",
