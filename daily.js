@@ -2,9 +2,23 @@
  'use strict';
  const data=window.NYANMA_DAYS||[];if(!data.length)return;
  const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',month:'2-digit',day:'2-digit'}).format(new Date()).split('-').map(Number);
+ // Use explicit parts so the visitor's locale cannot change month/day order.
+ const parts=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Tokyo',month:'numeric',day:'numeric'}).formatToParts(new Date());
+ const today=['month','day'].map(type=>Number(parts.find(p=>p.type===type).value));
  const picks=document.getElementById('daily-picks');
- if(picks){let selected=data.filter(x=>x.month===today[0]&&x.day===today[1]);const exact=selected.length>0;const seed=today[0]*31+today[1];for(let i=0;selected.length<3&&i<data.length;i++){const x=data[(seed+i*17)%data.length];if(!selected.includes(x))selected.push(x);}picks.innerHTML=selected.map(x=>`<a href="kyou.html?art=${encodeURIComponent(x.id)}"><img src="${esc(x.src)}" alt="${esc(x.title)}" loading="lazy" width="400" height="533"><span>${x.month}.${String(x.day).padStart(2,'0')} / ${esc(x.title)}</span></a>`).join('');document.getElementById('daily-label').textContent=exact?'今日と同じ日付の作品から':'今日のピックアップ · 過去の作品から';}
+ if(picks){
+  // Leap-year calendar keeps Feb 29 valid; circular distance handles New Year.
+  const ordinal=(m,d)=>(Date.UTC(2000,m-1,d)-Date.UTC(2000,0,1))/86400000;
+  const now=ordinal(...today);
+  const distance=x=>{const d=Math.abs(ordinal(x.month,x.day)-now);return Math.min(d,366-d);};
+  const rank=x=>x.month===today[0]?(x.day===today[1]?0:1):2;
+  const selected=[...data].sort((a,b)=>rank(a)-rank(b)||distance(a)-distance(b)||a.id.localeCompare(b.id)).slice(0,3);
+  picks.innerHTML=selected.map(x=>`<a href="kyou.html?art=${encodeURIComponent(x.id)}"><img src="${esc(x.src)}" alt="${esc(x.title)}" loading="lazy" width="400" height="533"><span>${x.month}.${String(x.day).padStart(2,'0')} / ${esc(x.title)}</span></a>`).join('');
+  const label=document.getElementById('daily-label');
+  if(label)label.textContent=rank(selected[0])===0?'今日と同じ日付の作品を先頭にご紹介':rank(selected[0])===1?`${today[0]}月の作品を中心に · 過去のイラストから`:'今日に近い日付の作品から';
+  const monthLink=document.getElementById('daily-month-link');
+  if(monthLink&&data.some(x=>x.month===today[0])){monthLink.href=`kyou.html?month=${today[0]}`;monthLink.textContent=`${today[0]}月のイラストを見る ↗`;}
+ }
  const grid=document.getElementById('art-grid');if(!grid)return;
  let favorites=new Set(),storageAvailable=true;
  try{const saved=JSON.parse(localStorage.getItem('nyanma-favorites')||'[]');if(Array.isArray(saved))favorites=new Set(saved.filter(v=>typeof v==='string'));}catch{storageAvailable=false;}

@@ -6,6 +6,21 @@
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&toggle?.getAttribute('aria-expanded')==='true'){close();toggle.focus();}});
  document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))close();});
  const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
- // Track the existing outgoing calls to action without transmitting form contents.
- document.addEventListener('click',e=>{const link=e.target.closest('a');if(!link||typeof window.gtag!=='function')return;let event;if(link.href.includes('forms.gle'))event='inquiry_form_click';else if(link.href.includes('youtube.com'))event='youtube_click';else if(link.href.includes('x.com/nyanmayade'))event='social_follow_click';if(event)window.gtag('event',event,{page_location:location.href});});
+ // Record interactions, never form contents or visitor-entered query strings.
+ const track=(event,params={})=>{if(typeof window.gtag==='function')window.gtag('event',event,params);};
+ document.addEventListener('click',e=>{
+  const link=e.target.closest('a');if(!link)return;
+  const url=new URL(link.href,location.href);let event;
+  if(url.hostname==='forms.gle')event='inquiry_form_click';
+  else if(['youtube.com','www.youtube.com'].includes(url.hostname))event='youtube_click';
+  else if(url.hostname==='x.com'&&url.pathname.startsWith('/nyanmayade'))event=url.pathname.includes('/status/')?'social_post_click':'social_profile_click';
+  else if(url.origin===location.origin&&url.pathname.endsWith('/contact.html')&&!location.pathname.endsWith('/contact.html'))event='inquiry_page_click';
+  if(event)track(event,{source_page:location.pathname});
+ });
+ document.querySelectorAll('video').forEach(video=>{
+  const videoName=video.getAttribute('aria-labelledby')||video.querySelector('source')?.getAttribute('src')||video.getAttribute('src')||'site-video';
+  let started=false,completed=false;
+  video.addEventListener('playing',()=>{if(!started){started=true;track('portfolio_video_start',{video_name:videoName});}});
+  video.addEventListener('ended',()=>{if(!completed){completed=true;track('portfolio_video_complete',{video_name:videoName});}});
+ });
 })();

@@ -22,3 +22,9 @@ html{scroll-padding-top:100px}body.redesign{background:var(--bg);color:var(--ink
 .daily-picks img{object-fit:contain;background:#f3f5fc}
 @media(max-width:760px){.opening-art img{object-position:right top}}
 .intro-slot>div{min-width:0}.intro-player{overflow:hidden;border-radius:12px;background:#111a35;box-shadow:0 8px 30px #16296514}.intro-player video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}.intro-slot .intro-meta{font-size:11px;margin-top:16px}.intro-slot .text-link{font-size:12px;margin-top:6px}
+
+.example-note{max-width:1000px;margin:22px auto;color:var(--ink-soft);font-size:13px;line-height:1.9}
+.showcase-card .example-description{display:block;margin-top:12px;font-size:13px;font-weight:400;line-height:1.8;color:var(--ink-soft)}
+.showcase-card .example-format{display:block;margin-top:10px;font-size:11px;font-weight:400;color:var(--ink-soft)}
+.showcase-card .example-action{display:block;margin-top:16px;font-size:12px;font-weight:700;color:var(--blue)}
+.redesign .showcase-card img{object-fit:contain;background:#f4f6fc}
