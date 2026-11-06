@@ -21,3 +21,4 @@ html{scroll-padding-top:100px}body.redesign{background:var(--bg);color:var(--ink
 .opening-art img{object-position:70% top}.hero-note{display:none}
 .daily-picks img{object-fit:contain;background:#f3f5fc}
 @media(max-width:760px){.opening-art img{object-position:right top}}
+.intro-slot>div{min-width:0}.intro-player{overflow:hidden;border-radius:12px;background:#111a35;box-shadow:0 8px 30px #16296514}.intro-player video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}.intro-slot .intro-meta{font-size:11px;margin-top:16px}.intro-slot .text-link{font-size:12px;margin-top:6px}
